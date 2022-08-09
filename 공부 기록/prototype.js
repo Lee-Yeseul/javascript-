@@ -47,3 +47,8 @@ console.dir(Person2); // prototype 프로퍼티가 있다.
 console.dir(foo); // prototype 프로퍼티가 없다.
 console.log(Person2.__proto__ === Function.prototype);
 console.log(Person2.prototype === foo.__proto__);
+
+
+function Person1(){
+  this.name = 'Jane'
+}

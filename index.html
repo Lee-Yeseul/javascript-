@@ -5,10 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      ul {
+        background: palegreen;
+        padding: 15px 20px;
+      }
+      /*부모에 height 적용*/
+      /*
+      ul {
+        height: 45px;
+      }
+      */
+
+      /*부모에 overflow:hidden 적용*/
+      /*
+      ul {
+        position: relative;
+        padding: 15px 20px;
+        background: #e5e5e5;
+        overflow: hidden;
+      }
+      ul:before {
+        content: '';
+        position: absolute;
+        top: -30px;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        border-radius: 50%;
+      }
+      */
+
+      /*부모에 float 적용*/
+      /*
+      ul {
+        float: left;
+        padding: 15px 20px;
+      }
+      */
+
+      /*부모에 display:inline-block 적용*/
+      /*
+      ul {
+        padding: 15px 20px;
+      }
+      */
+
+      /*부모 다음 요소나 임의의 요소에 clear:both 적용*/
+      /*
+      ul {
+        padding: 15px 20px;
+      }
+      .nextBox {
+        clear: both;
+        margin-top: 50px;
+        background: yellow;
+      } 
+      */
+
+      /*부모에 가상요소 after에 clear:both 적용*/
+      /*
+      ul{
+        padding:15px 20px;
+        background:#e5e5e5;
+      }
+      ul:after{
+        content:'';
+        display:block;
+        clear:both;
+      }
+      */
+
+      /*부모에 display:flow-root 적용*/
+      ul {
+        display: flow-root;
+      }
+      ul > li {
+        float: left;
+        margin: 5px;
+        padding: 5px 10px;
+        background: pink;
+        list-style: none;
+      }
+    </style>
   </head>
   <body>
-    <!-- <script src="this.js"></script> -->
-    <!-- <script src="this2.js"></script> -->
-    <script src="prototype.js"></script>
+    <ul>
+      <li>float Item 1</li>
+      <li>float Item 2</li>
+      <li>float Item 3</li>
+    </ul>
+    <div class="nextBox">How to float clear</div>
   </body>
 </html>

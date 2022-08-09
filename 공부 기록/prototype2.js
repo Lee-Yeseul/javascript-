@@ -28,3 +28,27 @@ const CircleByPrototype1 = new CircleByPrototype(1);
 const CircleByPrototype2 = new CircleByPrototype(2);
 
 console.log(CircleByPrototype1 === CircleByPrototype2); //true
+
+const obj = {};
+const parent = { x: 1 };
+obj.__proto__;
+obj.__proto__ = parent;
+
+console.log(obj.x); //1
+
+(function () {}.hasOwnProperty('prototype'));
+
+({}.hasOwnProperty('prototype'));
+
+
+function Person(name){
+  this.name = name
+}
+
+Person.prototype.sayHello = function (){
+  console.log(`Hi My name is ${this.name}`)
+}
+
+const me = new Person('Lee')
+
+console.log(me.hasOwnProperty('name')) //true
